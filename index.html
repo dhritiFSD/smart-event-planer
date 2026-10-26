@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planora AI – Smart Event Planner</title>
+<meta name="description" content="Plan weddings, birthdays, college events and community gatherings with ideas, budget, checklist, timeline and vendors in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#home"><i class="fa-solid fa-wand-magic-sparkles"></i> Planora <b>AI</b></a>
+    <button id="burger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav id="nav">
+      <a data-nav="home" href="#home">Home</a>
+      <a data-nav="create" href="#create">Create Event</a>
+      <a data-nav="events" href="#events">My Events</a>
+      <a data-nav="dashboard" href="#dashboard">Planner</a>
+    </nav>
+  </div>
+  <div id="toolbar" class="tools" hidden>
+    <div class="wrap tbar">
+      <select id="activeEvent" aria-label="Active event"></select>
+      <div class="tabs">
+        <a data-tab="dashboard" href="#dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+        <a data-tab="ideas" href="#ideas"><i class="fa-solid fa-lightbulb"></i> Ideas</a>
+        <a data-tab="budget" href="#budget"><i class="fa-solid fa-indian-rupee-sign"></i> Budget</a>
+        <a data-tab="tasks" href="#tasks"><i class="fa-solid fa-list-check"></i> Tasks</a>
+        <a data-tab="timeline" href="#timeline"><i class="fa-solid fa-timeline"></i> Timeline</a>
+        <a data-tab="vendors" href="#vendors"><i class="fa-solid fa-store"></i> Vendors</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="view-home" class="view">
+    <div class="wrap hero">
+      <div class="hero-text">
+        <h1>Plan your perfect event, without the chaos.</h1>
+        <p>Planora AI turns a date, a budget and a theme into fresh ideas, a checklist, a timeline and a vendor list, all in one calm place.</p>
+        <div class="row gap">
+          <a class="btn lg" href="#create">Plan My Event</a>
+          <a class="btn ghost lg" href="#how">See how it works</a>
+        </div>
+        <p class="mute small">Free to try. Your plans stay saved in this browser.</p>
+      </div>
+      <div class="collage">
+        <div class="arch a1"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=70" alt="Wedding table decoration" onerror="this.remove()"></div>
+        <div class="arch a2"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=70" alt="Birthday party celebration" onerror="this.remove()"></div>
+        <div class="arch a3"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=70" alt="Guests at a gathering" onerror="this.remove()"></div>
+      </div>
+    </div>
+
+    <div class="wrap sec">
+      <h2>Everything an event needs</h2>
+      <p class="mute lead">Six tools that work together, so nothing slips through.</p>
+      <div class="grid3">
+        <article class="card feat"><i class="fa-solid fa-calendar-plus"></i><h3>Event creation</h3><p>Save weddings, birthdays, college events and community gatherings with date, venue, guests, budget and theme.</p></article>
+        <article class="card feat"><i class="fa-solid fa-lightbulb"></i><h3>AI event ideas</h3><p>Get decoration, food, venue and entertainment suggestions shaped by your theme and budget.</p></article>
+        <article class="card feat"><i class="fa-solid fa-indian-rupee-sign"></i><h3>Budget planner</h3><p>Log expenses in ₹ and watch the remaining budget and category chart update instantly.</p></article>
+        <article class="card feat"><i class="fa-solid fa-list-check"></i><h3>Task checklist</h3><p>Add deadlines, tick things off and follow a progress bar to event day.</p></article>
+        <article class="card feat"><i class="fa-solid fa-timeline"></i><h3>Smart timeline</h3><p>Milestones are worked out backwards from your event date.</p></article>
+        <article class="card feat"><i class="fa-solid fa-store"></i><h3>Vendor manager</h3><p>Keep contacts, estimated prices and booking status for every vendor.</p></article>
+      </div>
+    </div>
+
+    <div class="wrap sec">
+      <h2>What are you celebrating?</h2>
+      <p class="mute lead">Pick an event type to start with.</p>
+      <div class="grid4">
+        <a class="arch tile" href="#create" data-type="Wedding"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=70" alt="" onerror="this.remove()"><span>Wedding</span></a>
+        <a class="arch tile" href="#create" data-type="Birthday"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=500&q=70" alt="" onerror="this.remove()"><span>Birthday</span></a>
+        <a class="arch tile" href="#create" data-type="College Event"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=500&q=70" alt="" onerror="this.remove()"><span>College event</span></a>
+        <a class="arch tile" href="#create" data-type="Community Gathering"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=70" alt="" onerror="this.remove()"><span>Community gathering</span></a>
+      </div>
+    </div>
+
+    <div class="wrap sec" id="how">
+      <h2>How it works</h2>
+      <div class="grid3">
+        <article class="card step"><b>1</b><h3>Create your event</h3><p>Add the basics: date, place, guests, budget and theme.</p></article>
+        <article class="card step"><b>2</b><h3>Generate ideas</h3><p>Planora AI suggests decor, food, venues and entertainment you can add to your checklist.</p></article>
+        <article class="card step"><b>3</b><h3>Track everything</h3><p>Follow the budget, tasks, timeline and vendors from one dashboard.</p></article>
+      </div>
+    </div>
+
+    <div class="wrap sec">
+      <div class="cta">
+        <h2>Your next event starts here.</h2>
+        <a class="btn light lg" href="#create">Plan My Event</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATE -->
+  <section id="view-create" class="view wrap narrow" hidden>
+    <div class="phead"><div><h2>Create an event</h2><p class="mute">Tell us the basics. You can edit them later in My Events.</p></div></div>
+    <form id="eventForm" class="card form2" novalidate></form>
+  </section>
+
+  <!-- JS-rendered views -->
+  <section id="view-events" class="view wrap" hidden></section>
+  <section id="view-dashboard" class="view wrap" hidden></section>
+  <section id="view-ideas" class="view wrap" hidden></section>
+  <section id="view-budget" class="view wrap" hidden></section>
+  <section id="view-tasks" class="view wrap" hidden></section>
+  <section id="view-timeline" class="view wrap" hidden></section>
+  <section id="view-vendors" class="view wrap" hidden></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="logo small"><i class="fa-solid fa-wand-magic-sparkles"></i> Planora AI</span>
+    <span class="mute small">A student project built with HTML, CSS and JavaScript.</span>
+    <button class="linkbtn" data-act="reset">Reset demo data</button>
+  </div>
+</footer>
+
+<dialog id="dlg"></dialog>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
